@@ -1,6 +1,3 @@
-/* eslint-disable no-restricted-globals */
-
-// IndexedDB Helper (Vanilla JS)
 const DB_NAME = "h5p-storage";
 const STORE_NAME = "files";
 
@@ -27,29 +24,24 @@ function getFile(path) {
                 getRequest.onsuccess = () => resolve(getRequest.result);
                 getRequest.onerror = () => reject("Get Error");
             } catch (err) {
-                // If store doesn't exist or other error
                 reject(err);
             }
         };
     });
 }
 
-// Intercept fetch requests
 self.addEventListener("fetch", (event) => {
     const url = new URL(event.request.url);
 
-    // Check if request is for our virtual H5P path
     if (url.pathname.startsWith("/_h5p/")) {
         event.respondWith(
             (async () => {
                 try {
-                    // Remove '/_h5p/' prefix to get the storage key
                     const path = url.pathname.replace("/_h5p/", "");
 
                     const blob = await getFile(path);
 
                     if (blob) {
-                        // Determine content type based on extension
                         let contentType = "application/octet-stream";
                         if (path.endsWith(".json")) contentType = "application/json";
                         else if (path.endsWith(".js")) contentType = "text/javascript";
@@ -71,7 +63,6 @@ self.addEventListener("fetch", (event) => {
                     }
                 } catch (error) {
                     console.error("SW H5P Fetch Error:", error);
-                    // Return 404 so app might handle it or just fail gracefully
                     return new Response("Internal Error", { status: 500 });
                 }
             })()
@@ -79,7 +70,6 @@ self.addEventListener("fetch", (event) => {
     }
 });
 
-// Boilerplate to ensure SW activates immediately
 self.addEventListener("install", (event) => {
     event.waitUntil(self.skipWaiting());
 });

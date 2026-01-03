@@ -12,21 +12,15 @@ function PlayH5p({ h5pJsonPath }) {
       frameCss: "/assets/h5p.css"
     };
 
-    // Initialize H5P on mount
     new H5P(el, options)
       .then((res) => {
-        // console.log(res);
       })
       .catch((e) => {
         console.log("Err: ", e);
       });
 
-    // Cleanup on unmount
     return () => {
-      // H5P standalone doesn't seem to expose a clean destroy method on the instance 
-      // ensuring we don't leak or crash.
-      // Simply clearing the container innerHTML might be enough to prevent React warnings
-      // but `h5p-standalone` might leave global listeners.
+
       if (el) {
         el.innerHTML = "";
       }
