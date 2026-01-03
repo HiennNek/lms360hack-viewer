@@ -1,0 +1,19 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Compiled files
+build
+build-ide
+h5p
+coverage
+typedoc
+
+# vscode
+.DS_Store
+microsoft.gpg
+.env 
+
+# Dependency directory
+node_modules
