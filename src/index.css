@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply antialiased text-gray-800 bg-fixed;
+        background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+        min-height: 100vh;
+    }
+}
+
+@layer components {
+    .glass-card {
+        @apply bg-white/40 backdrop-blur-lg border border-white/40 shadow-xl rounded-3xl;
+    }
+
+    .glass-input {
+        @apply bg-white/50 backdrop-blur-md border border-white/50 rounded-2xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-300 transition-all duration-300 placeholder-gray-400;
+    }
+
+    .btn-primary {
+        @apply bg-gradient-to-r from-indigo-400 to-purple-400 text-white font-semibold px-6 py-3 rounded-2xl shadow-lg hover:shadow-indigo-200 hover:scale-105 active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed;
+    }
+
+    .btn-secondary {
+        @apply bg-white/60 backdrop-blur-sm text-gray-700 font-medium px-4 py-2 rounded-xl border border-white/40 shadow-sm hover:bg-white/80 transition-all duration-300;
+    }
+}
+
+/* Custom Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
