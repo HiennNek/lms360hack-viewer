@@ -3,8 +3,22 @@ import PlayH5p from "./components/PlayH5p";
 import { saveH5P } from "./services/h5p-storage";
 import "./index.css";
 
+// Attach polyfill to global window as early as possible
+if (typeof window !== 'undefined') {
+  window.H5P = window.H5P || {};
+  if (!window.H5P.isEmpty) {
+    window.H5P.isEmpty = function (value) {
+      return value === undefined ||
+        value === null ||
+        (typeof value === 'string' && value.trim().length === 0) ||
+        (Array.isArray(value) && value.length === 0) ||
+        (typeof value === 'object' && Object.keys(value).length === 0);
+    };
+  }
+}
+
 export default function App() {
-  const [h5pPath, setH5pPath] = useState("./");
+  const [h5pPath, setH5pPath] = useState(null);
   const [loading, setLoading] = useState(false);
   const [lmsUrl, setLmsUrl] = useState("");
 
@@ -146,8 +160,8 @@ export default function App() {
           </div>
 
           <div className="rounded-2xl overflow-hidden bg-white/30 min-h-[400px]">
-            {!loading && <PlayH5p key={h5pPath + Date.now()} h5pJsonPath={h5pPath} />}
-            {h5pPath === "./" && !loading && (
+            {!loading && h5pPath && <PlayH5p key={h5pPath + Date.now()} h5pJsonPath={h5pPath} />}
+            {!h5pPath && !loading && (
               <div className="flex flex-col items-center justify-center h-full text-gray-400 py-20">
                 <div className="text-6xl mb-4 opacity-50 animate-float">✨</div>
                 <p className="font-medium">Chưa có nội dung nào được chọn</p>

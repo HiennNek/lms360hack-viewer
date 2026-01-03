@@ -16,6 +16,16 @@
       font-family: 'Inter', sans-serif;
     }
   </style>
+  <script>
+    window.H5P = window.H5P || {};
+    window.H5P.isEmpty = function (value) {
+      return value === undefined ||
+        value === null ||
+        (typeof value === 'string' && value.trim().length === 0) ||
+        (Array.isArray(value) && value.length === 0) ||
+        (typeof value === 'object' && value !== null && Object.keys(value).length === 0);
+    };
+  </script>
 </head>
 
 <body>
