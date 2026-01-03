@@ -1,7 +1,0 @@
-{
-    "libraryStrings": {
-        "distributeButtonLabel": "Phân phối Đồng đều",
-        "distributeButtonWarning": "Các giá trị sẽ được thay đổi cho tất cả các phạm vi. Bạn có muốn tiếp tục không?",
-        "rangeOutOfSequenceWarning": "Phạm vi điểm nằm ngoài trình tự"
-    }
-}
