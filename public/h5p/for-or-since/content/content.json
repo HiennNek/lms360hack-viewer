@@ -1,0 +1,236 @@
+{
+  "overallFeedback": [
+    {
+      "from": 0,
+      "to": 100
+    }
+  ],
+  "behaviour": {
+    "autoContinue": true,
+    "timeoutCorrect": 500,
+    "timeoutWrong": 500,
+    "soundEffectsEnabled": false,
+    "enableRetry": false,
+    "enableSolutionsButton": false,
+    "passPercentage": 100
+  },
+  "l10n": {
+    "nextButtonLabel": "Câu hỏi tiếp theo",
+    "showSolutionButtonLabel": "Đáp án",
+    "retryButtonLabel": "Làm lại",
+    "solutionViewTitle": "Danh sách đáp án",
+    "correctText": "Chính xác!",
+    "incorrectText": "Không chính xác!",
+    "shouldSelect": "Tắt âm thanh phản hồi",
+    "shouldNotSelect": "Đóng",
+    "muteButtonLabel": "trang trình bày :num trong :total",
+    "closeButtonLabel": "Bạn dạt được :num trong :total điểm",
+    "slideOfTotal": "câu hỏi :num",
+    "scoreBarLabel": "Hiển thị giải pháp. Nhiệm vụ sẽ được đánh dấu bằng giải pháp chính xác của nó.",
+    "solutionListQuestionNumber": "Thử lại nhiệm vụ. Đặt lại tất cả các phản hồi và bắt đầu lại nhiệm vụ",
+    "a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
+    "a11yRetry": "Retry the task. Reset all responses and start the task over again."
+  },
+  "choices": [
+    {
+      "question": "1)\tAptomat là thiết bị:",
+      "answers": [
+        "Đóng cắt và bảo vệ mạch điện",
+        "Đóng cắt mạch điện",
+        "Bảo vệ mạch điện",
+        "Lấy điện"
+      ],
+      "subContentId": "acd238d2-bd28-44c6-aff7-1b136a168f56"
+    },
+    {
+      "question": "2)\tĐiểm khác nhau giữa Công tắc và Aptomat là:",
+      "answers": [
+        "Công tắc đóng cắt bằng tay, Aptomat có thể cắt nguồn điện tự động",
+        "Công tắc nhỏ hơn Aptomat",
+        "Công tắc chỉ đóng cắt 1 dây, Aptomat đóng cắt cả 2 dây",
+        "Công tắc dùng cho điện 1 chiều, Aptomat dùng cho điện xoay chiều"
+      ],
+      "subContentId": "ad904172-f6fe-42e5-9e2d-d1179f88059d"
+    },
+    {
+      "question": "3)\tCường độ dòng điện định mức của Aptomat so với cường độ dòng điện sử dụng phải:",
+      "answers": [
+        "Lớn hơn hoặc bằng",
+        "Bằng",
+        "Nhỏ hơn",
+        "Nhỏ hơn hoặc bằng"
+      ],
+      "subContentId": "8696a9b6-279c-4b51-8d1c-a535835f3c98"
+    },
+    {
+      "question": "4)\tAptomat bảo vệ dòng rò còn được gọi là:",
+      "answers": [
+        "Aptomat chống giật",
+        "Aptomat 3 pha",
+        "Aptomat dạng tép",
+        "Aptomat dạng khối"
+      ],
+      "subContentId": "cbb8bcb6-2827-4dcc-b63f-17539c080241"
+    },
+    {
+      "question": "5)\tBộ phận nào không có trên công tắc:",
+      "answers": [
+        "Cảm biến",
+        "Nút bật tắt",
+        "Vỏ công tắc",
+        "Các cực nối điện"
+      ],
+      "subContentId": "f70e14c7-6b73-4ae4-b0c3-4aaf6fa1421c"
+    },
+    {
+      "question": "6)\tỔ cắm điện là loại thiết bị:",
+      "answers": [
+        "Lấy điện",
+        "Đóng cắt mạch điện",
+        "Bảo vệ mạch điện",
+        "Lấy điện và bảo vệ mạch điện"
+      ],
+      "subContentId": "5584d7ef-c390-490e-bad9-7ddd1625043f"
+    },
+    {
+      "question": "7)\tPhích cắm điện luôn được dùng kèm với:",
+      "answers": [
+        "Ổ cắm điện",
+        "Công tắc",
+        "Aptomat",
+        "Cầu dao"
+      ],
+      "subContentId": "b2adf009-df5c-4c1b-9654-7aeeff2c4b64"
+    },
+    {
+      "question": "8)\tBộ phận nào sau đây có trên ổ cắm điện:",
+      "answers": [
+        "Các cực tiếp điện",
+        "Nút bật tắt",
+        "Cảm biến nhiệt độ",
+        "Cầu chì"
+      ],
+      "subContentId": "3f471149-656f-4e91-ab49-09d7ab01545d"
+    },
+    {
+      "question": "9)\tỔ cắm điện thường có cường độ dòng điện định mức là:",
+      "answers": [
+        "10A",
+        "1A",
+        "100A",
+        "500A"
+      ],
+      "subContentId": "b60c7a0f-ab55-4dc7-a387-eb3179b2fe21"
+    },
+    {
+      "question": "10)\tCông tơ điện là thiết bị dùng để đo:",
+      "answers": [
+        "Điện năng tiêu thụ của đồ dùng điện",
+        "Cường độ dòng điện",
+        "Điện áp",
+        "Công suất mạch điện"
+      ],
+      "subContentId": "4284c879-5c9d-4f38-ba92-2af812ef4da3"
+    },
+    {
+      "question": "11)\tĐồng hồ vạn năng không đo được đại lượng nào sau đây:",
+      "answers": [
+        "Đường kính dây dẫn điện",
+        "Cường độ dòng điện",
+        "Điện áp",
+        "Điện trở"
+      ],
+      "subContentId": "41f6fbd4-b3c1-473f-ad13-ca5b9100efe6"
+    },
+    {
+      "question": "12)\tAmpe kìm là dụng cụ chuyên dùng để đo:",
+      "answers": [
+        "Cường độ dòng điện qua dây dẫn",
+        "Điện năng tiêu thụ của đồ dùng điện",
+        "Công suất mạch điện",
+        "Điện trở"
+      ],
+      "subContentId": "413f33a0-5590-4d4e-9271-6ae079eaa615"
+    },
+    {
+      "question": "13)\tMạng điện nào sau đây không phải là mạng điện trong nhà:",
+      "answers": [
+        "Mạng điện trong nhà máy sản xuất",
+        "Mạng điện trong lớp học",
+        "Mạng điện trong cửa hàng tạp hóa",
+        "Mạng điện trong tiệm sửa xe gắn máy"
+      ],
+      "subContentId": "753b981a-e9b4-4ae1-9fef-9bfb00446c72"
+    },
+    {
+      "question": "14)\tSơ đồ nguyên lí không thể hiện thông tin nào sau đây:",
+      "answers": [
+        "Vị trí lắp đặt của các thiết bị",
+        "Số lượng các thiết bị",
+        "Cách nối các thiết bị với nhau",
+        "Chủng loại thiết bị"
+      ],
+      "subContentId": "1999b081-d04e-4811-b560-b1908774c3eb"
+    },
+    {
+      "question": "15)\tSơ đồ nguyên lí thường dùng để:",
+      "answers": [
+        "Giải thích nguyên lí hoạt động của mạch điện",
+        "Lắp đặt mạch điện",
+        "Sửa chữa mạch điện",
+        "Bảo trì mạch điện"
+      ],
+      "subContentId": "49904687-41dc-4d17-b767-9b2f646d1234"
+    },
+    {
+      "question": "<p>16) Kí hiệu nào là của công tắc 2 cực:</p>\n",
+      "answers": [
+        "<p><img src=\"https://lh3.googleusercontent.com/pw/AP1GczN16Gaz23y0objy7NVxhjQbV6pW_eoi4-L7xflCNuahIGbv019BonXnlxj1Yh3Vp1cvmOhkrZM5DOihu_6Q-xv7mLw2K_8E7PrrVWUdqG-VHloCh7HKJhkKj6dN6uD9ZA5JO15v5G7QntrdnF2qHax1=w184-h87-s-no-gm?authuser=0\"></p>\n",
+        "<p><img src=\"https://lh3.googleusercontent.com/pw/AP1GczMB88DgMdkKorknPRtwZgiAFNY8H35anVrHTLvKO1K1Pqdw6v5u7PaNbjf5QdwWV8H8f9Ix1l7WnSe7P8XMYlCtl3pvCX9qUK1WbXyP6QDfOqFSbf3IJ6YA_n62iSNhLO2NpmioKGe_iuDtv7UHaQEH=w168-h81-s-no-gm?authuser=0\"></p>\n",
+        "<p><img src=\"https://lh3.googleusercontent.com/pw/AP1GczOZh8hc4qg4bQ2HR05QzTiEcnlMw1bfVYpl_tUSmQTSxdavltPYyF7G0_Ano-7TBtWqu9kyuZSB_MDuDnMmHt8I1asPpjm0ziu6HR-wp05JcVylGu4pCJAoiTjrJ-YWA03bGQ88NCua8qSb464LIFmv=w167-h93-s-no-gm?authuser=0\"></p>\n",
+        "<p><img src=\"https://lh3.googleusercontent.com/pw/AP1GczN3qWLz5ozBUuGBvCnc3d5G9PeSezMGCF2bxYiVQ8ToRKf_lp6D5UtdgqoIN7r6yxMtrm7izIZSyhfycIG4GLhlaQlJ5DV6thtZDWDO28uHWKBYl7wkJKV4NnJlcfHQ_OpwsUUIpwbb0LTqTNikdJfs=w179-h87-s-no-gm?authuser=0\"></p>\n"
+      ],
+      "subContentId": "71d7255f-1739-43a7-abea-f1cc3af19752"
+    },
+    {
+      "question": "17)\tKí hiệu nào là của đèn sợi đốt:",
+      "answers": [
+        "<p><img src=\"https://lh3.googleusercontent.com/pw/AP1GczOZh8hc4qg4bQ2HR05QzTiEcnlMw1bfVYpl_tUSmQTSxdavltPYyF7G0_Ano-7TBtWqu9kyuZSB_MDuDnMmHt8I1asPpjm0ziu6HR-wp05JcVylGu4pCJAoiTjrJ-YWA03bGQ88NCua8qSb464LIFmv=w167-h93-s-no-gm?authuser=0\"></p>\n",
+        "<p><img src=\"https://lh3.googleusercontent.com/pw/AP1GczN3qWLz5ozBUuGBvCnc3d5G9PeSezMGCF2bxYiVQ8ToRKf_lp6D5UtdgqoIN7r6yxMtrm7izIZSyhfycIG4GLhlaQlJ5DV6thtZDWDO28uHWKBYl7wkJKV4NnJlcfHQ_OpwsUUIpwbb0LTqTNikdJfs=w179-h87-s-no-gm?authuser=0\"></p>\n",
+        "<p><img src=\"https://lh3.googleusercontent.com/pw/AP1GczN16Gaz23y0objy7NVxhjQbV6pW_eoi4-L7xflCNuahIGbv019BonXnlxj1Yh3Vp1cvmOhkrZM5DOihu_6Q-xv7mLw2K_8E7PrrVWUdqG-VHloCh7HKJhkKj6dN6uD9ZA5JO15v5G7QntrdnF2qHax1=w184-h87-s-no-gm?authuser=0\"></p>\n",
+        "<p><img src=\"https://lh3.googleusercontent.com/pw/AP1GczMB88DgMdkKorknPRtwZgiAFNY8H35anVrHTLvKO1K1Pqdw6v5u7PaNbjf5QdwWV8H8f9Ix1l7WnSe7P8XMYlCtl3pvCX9qUK1WbXyP6QDfOqFSbf3IJ6YA_n62iSNhLO2NpmioKGe_iuDtv7UHaQEH=w168-h81-s-no-gm?authuser=0\"></p>\n"
+      ],
+      "subContentId": "b99a4538-3177-4250-8200-8ea638bc149e"
+    },
+    {
+      "question": "18)\tĐể có thể bật tắt được đèn, trong mạch điện công tắc và đèn phải:",
+      "answers": [
+        "Mắc nối tiếp với nhau",
+        "Mắc song song với nhau",
+        "Mắc chung với nhau",
+        "Không cần công tắc"
+      ],
+      "subContentId": "678c9719-cc7a-4e15-a07e-d036c41b59e6"
+    },
+    {
+      "question": "19)\tSơ đồ lắp đặt được vẽ:",
+      "answers": [
+        "Sau khi vẽ sơ đồ nguyên lý",
+        "Trước khi vẽ sơ đồ nguyên lý",
+        "Song song với sơ đồ nguyên lý",
+        "Không cần sơ đồ nguyên lý"
+      ],
+      "subContentId": "39635f54-cd6e-4d83-8055-80b666c41e40"
+    },
+    {
+      "question": "20)\tDựa vào yêu cầu mạch điện có 2 đèn sáng tắt độc lập với nhau, thì mạch điện phải có mấy công tắc:",
+      "answers": [
+        "2 công tắc",
+        "1 công tắc",
+        "3 công tắc",
+        "Không có công tắc"
+      ],
+      "subContentId": "ca0a077f-3d83-43de-ab55-645b313427dd"
+    }
+  ]
+}

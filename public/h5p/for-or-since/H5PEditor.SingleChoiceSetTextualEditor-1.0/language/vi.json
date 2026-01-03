@@ -1,0 +1,6 @@
+{
+    "libraryStrings": {
+        "helpText": "Tạo các khối câu hỏi và câu trả lời, trong đó mỗi khối được phân tách bằng một dòng trống. Trong mỗi khối, dòng đầu tiên là câu hỏi, các dòng khác chứa các câu trả lời. Câu trả lời đầu tiên là câu trả lời đúng",
+        "warning": "Cảnh báo! Nếu bạn thay đổi các tác vụ trong trình soạn thảo văn bản, tất cả các định dạng văn bản đa dạng thức (bao gồm cả ngắt dòng) sẽ bị xóa."
+    }
+}
