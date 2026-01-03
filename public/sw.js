@@ -1,32 +1,41 @@
 const DB_NAME = "h5p-storage";
 const STORE_NAME = "files";
 
-function getFile(path) {
+// Cache for IDB connection to avoid repeated opens
+let dbPromise = null;
+
+function getDB() {
+    if (!dbPromise) {
+        dbPromise = new Promise((resolve, reject) => {
+            const request = indexedDB.open(DB_NAME, 1);
+            request.onerror = () => reject("DB Open Error");
+            request.onupgradeneeded = (event) => {
+                const db = event.target.result;
+                if (!db.objectStoreNames.contains(STORE_NAME)) {
+                    db.createObjectStore(STORE_NAME);
+                }
+            };
+            request.onsuccess = (event) => resolve(event.target.result);
+        });
+    }
+    return dbPromise;
+}
+
+async function getFile(path) {
+    const db = await getDB();
     return new Promise((resolve, reject) => {
-        const request = indexedDB.open(DB_NAME, 1);
+        try {
+            const transaction = db.transaction([STORE_NAME], "readonly");
+            const store = transaction.objectStore(STORE_NAME);
+            const getRequest = store.get(path);
 
-        request.onerror = (event) => reject("DB Open Error");
-
-        request.onupgradeneeded = (event) => {
-            const db = event.target.result;
-            if (!db.objectStoreNames.contains(STORE_NAME)) {
-                db.createObjectStore(STORE_NAME);
-            }
-        };
-
-        request.onsuccess = (event) => {
-            const db = event.target.result;
-            try {
-                const transaction = db.transaction([STORE_NAME], "readonly");
-                const store = transaction.objectStore(STORE_NAME);
-                const getRequest = store.get(path);
-
-                getRequest.onsuccess = () => resolve(getRequest.result);
-                getRequest.onerror = () => reject("Get Error");
-            } catch (err) {
-                reject(err);
-            }
-        };
+            getRequest.onsuccess = () => resolve(getRequest.result);
+            getRequest.onerror = () => reject("Get Error");
+        } catch (err) {
+            // If transaction fails (e.g. DB closed), clear cache and try once more
+            dbPromise = null;
+            reject(err);
+        }
     });
 }
 
@@ -62,7 +71,7 @@ self.addEventListener("fetch", (event) => {
                         return new Response("File not found in H5P storage", { status: 404 });
                     }
                 } catch (error) {
-                    console.error("SW H5P Fetch Error:", error);
+                    console.error(`[SW] Error serving ${url.pathname}:`, error);
                     return new Response("Internal Error", { status: 500 });
                 }
             })()

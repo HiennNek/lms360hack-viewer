@@ -26,14 +26,18 @@ export default function App() {
     const file = event.target.files[0];
     if (!file) return;
 
+    setH5pPath(null);
     setLoading(true);
     try {
       await saveH5P(file);
-      setH5pPath(`/_h5p`);
+      // Give the system a moment to settle after IDB transaction
+      setTimeout(() => {
+        setH5pPath("/_h5p/");
+        setLoading(false);
+      }, 200);
     } catch (error) {
       console.error("Error processing H5P file:", error);
       alert("Tải tệp H5P thất bại");
-    } finally {
       setLoading(false);
     }
   };
@@ -50,6 +54,7 @@ export default function App() {
         return;
       }
 
+      setH5pPath(null);
       setLoading(true);
       const response = await fetch(`/api/download?id=${id}`);
       if (!response.ok) {
@@ -58,11 +63,14 @@ export default function App() {
       const blob = await response.blob();
       const file = new File([blob], `h5p-${id}.h5p`, { type: "application/zip" });
       await saveH5P(file);
-      setH5pPath(`/_h5p`);
+
+      setTimeout(() => {
+        setH5pPath("/_h5p/");
+        setLoading(false);
+      }, 200);
     } catch (error) {
       console.error("Error fetching H5P file:", error);
-      alert("Không thể tải tệp H5P từ LMS360. Hãy đảm bảo máy chủ backend đang chạy.");
-    } finally {
+      alert("Không thể tải tệp H5P từ LMS360.");
       setLoading(false);
     }
   };
